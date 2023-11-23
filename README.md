@@ -1,2 +1,8 @@
 # crudTrabalhoAvaliativo
-Trabalho Avaliativo desenvolvimento web e banco de dados
+
+Trabalho Avaliativo Desenvolvimento Web e Banco de Dados M32
+
+Integrantes: Bruno Eduardo Pena, Fernanda Moreira Cavali, Lara Heloisa Silva Deitos, Pedro Felipe Onofre Utumi, Sara Stephany Guaiume Cipriano
+
+
+
