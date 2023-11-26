@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+   
+    box-sizing: border-box;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 
 }
@@ -8,37 +8,31 @@
 :root {
 
     /* cores */
-    --black: #000;
-    --darkgray: #333; 
-    --white: #FFFFFF;
-    --light-gray: #C2C2C2;
-    --gray: #555555;
+    --white: #FFF;
+    --black: #000; 
+    --light-gray: rgb(216, 216, 231);
     --blue: #1E2772;
+
    
     /* dimesoes */
-    --width: 40vw;
+    --width: 100%;
+    --size: 6vh;
 
   }
 
 body {
-    height: 100vh;
-    width: 100vw;
     display: flex;
-
     justify-content: center;
-    align-self: center;
-
+    align-items: center;
+    height: 100vh;
 
     background-color: var(--blue);
 
 }
 
 nav {
-    
-    position: fixed;
-    top: 0;
     width: var(--width);
-    padding-top: 2%;
+    padding-top: 4%;
 
 
     display: flex;
@@ -60,53 +54,55 @@ h1 {
    
 }
 
-main{    
-    height: 85%;
-    width: var(--width);
+main{  
+    width: calc(var(--width) / 2);
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
+
+    align-items: center;
     border-radius: 30px;
-    gap: 8px;
-    background-color: var(--light-gray);
+    gap: 18px;
+
+    background-color: var(--light-gray); 
 
 }
 
-input, label {
-    width: 80%;
-    align-self: center;
-    color: var(--black) ;
-    font-size: 16px; 
+input, label, button {
+    width: calc(var(--width)*0.8); 
+   
+    font-size: 16px;
 
+    align-self: center;
+    color: var(--black) ; 
+}
+
+input, button {
+    height: var(--size);
+    border-radius: 10px;
 }
 
 input {
 
     background-color: var(--light-gray);
     border: 0px;
-    border-radius: 8px;
-    height: 6vh;
     padding: 4px;
 
 }
 
 label {
     padding-top: 10px;
-    height: 3%;
+    
 }
-
-
 
 button {
-    background-color: var(--darkgray);
-    width: 80%;
-    height: 6%;
-    align-self: center;
+    background-color: var(--blue);
+    width: calc(var(--width)*0.6);
 
     color: var(--white);
-    border: 0px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
+    
+    margin-bottom: 20px; /* Aumenta o espaço abaixo do botão */
 }
+
+
+
