@@ -106,3 +106,23 @@ button {
 
 
 
+.inputAfter {
+    position: relative;
+}
+  
+.inputAfter::after {
+    background-color: var(--orange);
+    background-repeat: no-repeat;     /*se não repete */
+    background-position: center center;
+
+    content: '';
+    display: block;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+   
+    position: absolute;
+    right: 5%;
+    top: 0px;
+  }
