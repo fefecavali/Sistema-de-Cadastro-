@@ -4,8 +4,8 @@ from sqlalchemy.orm import sessionmaker
 
 ''' --> Configurações  '''
 
-engine = create_engine('postgresql://EUFACOPROGRAMA:apXBE4kgASy6@ep-damp-waterfall-38037149.us-east-2.aws.neon.tech/mecanica_teste?sslmode=require')
-
+# engine = create_engine('postgresql://EUFACOPROGRAMA:apXBE4kgASy6@ep-damp-waterfall-38037149.us-east-2.aws.neon.tech/mecanica_teste?sslmode=require')
+engine = create_engine('postgresql://postgres:pgadmin123@localhost:5432/')
 Session = sessionmaker(bind=engine)
 session = Session()
 base = declarative_base()
