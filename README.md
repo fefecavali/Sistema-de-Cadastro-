@@ -1,8 +1,5 @@
 # crudTrabalhoAvaliativo
 
-• README explicando como o código deve ser executado, quais bibliotecas devem ser
-instaladas e como instalá-las.
-
 Trabalho Avaliativo Desenvolvimento Web e Banco de Dados M32
 
 1. Criamos um ambiente virtual :
@@ -24,4 +21,3 @@ Trabalho Avaliativo Desenvolvimento Web e Banco de Dados M32
 
 
 Obs: Nomes de entidade em inglês para padronizar com resto do código.
-
