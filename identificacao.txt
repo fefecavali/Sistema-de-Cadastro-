@@ -1,0 +1,15 @@
+#crudTrabalhoAvaliativo
+
+Trabalho Avaliativo Desenvolvimento Web e Banco de Dados M32
+
+Integrantes:
+ 
+1. Bruno Eduardo Pena - 2461234 ,
+2. Fernanda Moreira Cavali - 2441012 ,
+3. Lara Heloisa Silva Deitos - 2441071, 
+4. Pedro Felipe Onofre Utumi - 2441160 , 
+5. Sara Stephany Guaiume Cipriano - 2441187 .
+
+
+--> Nomes de entidade em inglês para padronizar com resto do código
+
