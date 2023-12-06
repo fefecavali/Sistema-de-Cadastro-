@@ -85,38 +85,8 @@ class Payment(Base):
                     parcelas: {self.portion} """    
 
 
-# Criação das tabelas no banco de dados (se já existirem, não serão recriadas)
+# Criação das tabelas no banco de dados (verifica se existe)
 Base.metadata.create_all(engine)
 
-# '----> INSERT <----'
-
-data_insert = Customer(id_customer="21499845678", number_customer=998058909, address_customer="Rua Mambore bonita", name_customer="Fernanda", car="Ferrari 2025")
-data_insert2 = Item(id_item=22, name_item_request="Vela", price=20)
-data_insert3 = Item_pedido(id_item=22, payment="dinheiro", request="a vista", service="vela queimada")
-
-# Adicionando objetos à sessão e commitando as alterações
-session.add(data_insert)
-session.add(data_insert2)
-session.commit()
-
-# Fechar conexão
-session.close()  
-
-
-# # data = session.query(Customer).all()
-# # data = session.query(Item).all()
-# # data = session.query(Item_pedido).all()
-
-# # session.commit()
-
-# # '----> UPDATE <----'
-# # session.query(Customer).filter(Customer.id_customer == "21499845678").update( { "name_customer" : "Fernanda Cavali"})
-# # session.query(Item).filter(Item.id_item == 22).update( { "name_item_pedido" : "Cabo de vela"})
-# # session.query(Item_pedido).filter(Item_pedido.id_item == 22).update( { "service" : "vela ruim"})
-# # session.commit()
-
-# # '----> DELETE <----'
-
-# # session.query(Customer).filter(Customer.id_customer == "21499845678").delete()
-# # session.query(Item).filter(Item.id_item == 22).delete()
-# # session.query(Item_pedido).filter(Item_pedido.id_item == 22).delete()
+session.commit() #efetivar comando
+session.close()  #fechar sessao
