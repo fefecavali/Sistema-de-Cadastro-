@@ -11,7 +11,7 @@ Base = declarative_base()
 
 # Entidades
 class Customer(Base):
-    __tablename__ = 'customer'
+    __tablename__ = 'customer'       #nome da tabela no Banco de Dados
 
     id_customer = Column(String, primary_key=True)
     number_customer = Column(Integer, nullable=False)
