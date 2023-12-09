@@ -3,8 +3,8 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 # Configurações da conexão e sessão
 
-'''engine = create_engine('postgresql://EUFACOPROGRAMA:apXBE4kgASy6@ep-damp-waterfall-38037149.us-east-2.aws.neon.tech/mecanica_teste?sslmode=require')'''
-engine = create_engine('postgresql://postgres:pgadmin123@localhost:5432/mecanica_teste')
+engine = create_engine('postgresql://EUFACOPROGRAMA:apXBE4kgASy6@ep-damp-waterfall-38037149.us-east-2.aws.neon.tech/mecanica_teste?sslmode=require')  #servidor web
+
 Session = sessionmaker(bind=engine)
 session = Session()
 Base = declarative_base()
@@ -20,7 +20,11 @@ class Customer(Base):
     car = Column(String, nullable=False)
 
     def __repr__(self):
-        return f'Cliente {self.name_customer}, proprietário {self.car}, Cpf: {self.id_customer}, Tel: {self.number_customer}'
+        return f'''
+    Cliente {self.name_customer}, proprietário (a) de: {self.car}, 
+    Cpf: {self.id_customer},
+    Tel: {self.number_customer}
+                            '''
 
 class Item(Base):
     __tablename__ = 'item'
@@ -30,10 +34,14 @@ class Item(Base):
     price = Column(Integer, nullable=False)
     
     def __repr__(self):
-        return f"Número do item: {self.id_item}, nome: {self.name_item_request}, preço: R${self.price} reais"
+        return f'''
+    Número do item: {self.id_item}, 
+    Nome: {self.name_item_request}, 
+    Preço: R${self.price} reais
+                            '''
 
-class Item_pedido(Base):
-    __tablename__ = 'item_pedido'
+class Order_item(Base):
+    __tablename__ = 'order_item'
 
     id_item = Column(Integer, primary_key=True)
     payment = Column(String, nullable=False)
@@ -41,10 +49,12 @@ class Item_pedido(Base):
     service = Column(String, nullable=False)
     
     def __repr__ (self):
-        return f''' Número do Item: {self.id_item},
-        Tipo de pagamento: {self.payment}, 
-        Pedido: {self.request}, 
-        Serviço: {self.service}'''
+        return f''' 
+    Número do Item: {self.id_item},
+    Tipo de pagamento: {self.payment}, 
+    Pedido: {self.request}, 
+    Serviço: {self.service}
+                            '''
 
 class Employee(Base):
     __tablename__ = 'employee'
@@ -57,32 +67,37 @@ class Employee(Base):
     date_born = Column(Date, nullable = False)
 
     def __repr__(self):
-        return f''' O funcionario {self.name_employee}, numero {self.number_employee} está responsável pelo serviço'''
+        return f''' 
+    O funcionario {self.name_employee}, numero: {self.number_employee} está responsável pelo serviço
+                            '''
     
 class Order(Base):
-    __tablename__ = 'order_table'
+    __tablename__ = 'order_service'
 
     id_order = Column(Integer, primary_key=True)
     id_customer = Column(String, ForeignKey("customer.id_customer"), nullable=False)
-    id_serv = Column(Integer, nullable=False)
+    id_serv = Column(Integer, nullable=False)                    
     
     def __repr__ (self):
-        return f""" Pedido {self.id_order}, quem pediu {self.id_customer}
-                id serviço : {self.id_customer} """
-    
+        return f'''
+    Pedido {self.id_order}, de {self.id_customer}
+    Id serviço : {self.id_serv}
+                            '''    
 class Payment(Base):
     __tablename__ = 'payment'
 
     id_pay = Column(Integer, primary_key=True)
-    id_order = Column(Integer, ForeignKey("order_table.id_order"), nullable=False)
+    id_order = Column(Integer, ForeignKey("order_service.id_order"), nullable=False)
     name_pay = Column(String, nullable=False)
     portion = Column(Integer, nullable=False)
     
     def __repr__ (self):
-        return f""" Pagamento {self.id_pay}, 
-                    forma de pagamento {self.name_pay}
-                    Pedido {self.id_order}
-                    parcelas: {self.portion} """    
+        return f'''
+    Pagamento {self.id_pay}, 
+    Forma de pagamento: {self.name_pay}
+    Pedido {self.id_order}
+    Parcelas: {self.portion}
+                            '''
 
 
 # Criação das tabelas no banco de dados (verifica se existe)
