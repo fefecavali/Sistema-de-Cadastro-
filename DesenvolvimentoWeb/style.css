@@ -1,128 +1,40 @@
-* {
-   
-    box-sizing: border-box;
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastrarProduto</title>
 
-}
-
-:root {
-
-    /* cores */
-    --white: #FFF;
-    --black: #000; 
-    --light-gray: rgb(216, 216, 231);
-    --blue: #1E2772;
-
-   
-    /* dimesoes */
-    --width: 100%;
-    --size: 6vh;
-
-  }
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
-    background-color: var(--blue);
-
-}
-
-nav {
-    width: var(--width);
-    padding-top: 4%;
-
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-nav a {
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--blue);
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/javascript.js"></script>
+</head>
+<body>
     
-}
-
-h1 {
-    font-size: 40px;
-    text-align: center;
-    font-weight: 600;
-   
-}
-
-main{  
-    width: calc(var(--width) / 2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    align-items: center;
-    border-radius: 30px;
-    gap: 18px;
-
-    background-color: var(--light-gray); 
-
-}
-
-input, label, button {
-    width: calc(var(--width)*0.8); 
-   
-    font-size: 16px;
-
-    align-self: center;
-    color: var(--black) ; 
-}
-
-input, button {
-    height: var(--size);
-    border-radius: 10px;
-}
-
-input {
-
-    background-color: var(--light-gray);
-    border: 0px;
-    padding: 4px;
-
-}
-
-label {
-    padding-top: 10px;
+    <!-- <form action="" method="post"> -->
+        <main>
     
-}
-
-button {
-    background-color: var(--blue);
-    width: calc(var(--width)*0.6);
-
-    color: var(--white);
+            <nav> 
+                <a href="../HTML/cadastro.html" >Register</a>
+                <a href="#">Login</a>
+            </nav>
     
-    margin-bottom: 20px; /* Aumenta o espaço abaixo do botão */
-}
-
-
-
-.inputAfter {
-    position: relative;
-}
-  
-.inputAfter::after {
-    background-color: var(--orange);
-    background-repeat: no-repeat;     /*se não repete */
-    background-position: center center;
-
-    content: '';
-    display: block;
-
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-   
-    position: absolute;
-    right: 5%;
-    top: 0px;
-  }
+            <h1>Log in to your account</h1>
+    
+    
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="pedroguaiume@gmail.com" required>
+        
+        
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter your password" required>
+        
+            <!-- <a href="#" id="forgot">Forgot Password?</a>  n sei se vamos deixar no codigo ainda -->
+            
+            <button type="submit" onclick="verifica_login()" >Create Account</button>
+        
+            
+        </main>
+    
+    <!-- </form> -->
+</body>
+</html>
