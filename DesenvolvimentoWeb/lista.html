@@ -3,81 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cadastrarProduto</title>
+    <title>Document</title>
 
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="../CSS/lista.css">
 </head>
+<html>
 <body>
-    
-    <form action="" method="post">
-        <main>
-    
-            <nav> 
-                <a href="#">Register</a>
-                <a href="./login.html">Login</a>
-            </nav>
-    
-            <h1>Create your account</h1>
-    
-            <label for="name">Full name</label>
-            <input id="name" type="text" placeholder="Pedro Guaiume" >
-    
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="pedroguaiume@gmail.com" >
-        
-        
-            <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Enter your password" >
-        
-            <!-- <a href="#" id="forgot">Forgot Password?</a>  n sei se vamos deixar no codigo ainda -->
-    
-            <button onclick="register()">Create Account</button>
-           
-            
-        </main>
-    
+    <div class="container">
+        <div class="foto">
+            <img src="https://img.freepik.com/vetores-premium/mascote-de-desenho-mecanico_85893-206.jpg" alt="">
+        </div>
+    <div class="usuario">
+        <h1>Informações sobre seus pedidos</h1>
+    <br>
+    <form action="/buscar_pedido" method="post">
+        <label for="pedido_id">Digite o ID do pedido:</label>
+        <br>
+        <input type="text" id="pedido_id" name="pedido_id" required>
+        <button type="submit">Buscar</button>
     </form>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cadastrarProduto</title>
-
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
-</head>
-<body>
-    
-    <form action="" method="post">
-        <main>
-    
-            <nav> 
-                <a href="#">Register</a>
-                <a href="./login.html">Login</a>
-            </nav>
-    
-            <h1>Create your account</h1>
-    
-            <label for="name">Full name</label>
-            <input id="name" type="text" placeholder="Pedro Guaiume" >
-    
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="pedroguaiume@gmail.com" >
-        
-        
-            <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Enter your password" >
-        
-            <!-- <a href="#" id="forgot">Forgot Password?</a>  n sei se vamos deixar no codigo ainda -->
-    
-            <button onclick="register()">Create Account</button>
-           
-            
-        </main>
-    
-    </form>
+    <br>
+    {% if pedido %}
+    <ul>
+        {% for service in order_item %}
+            <li>{{ order_item.service }}</li>
+    {% endfor %}
+    </ul>
+    <nav>
+        <a href="pagina.html">Página Principal</a>
+        <a href="index.html">Login</a>
+        <a href="cadastro.html">Register</a>
+    </nav>
+    </div>
+    </div>
 </body>
 </html>
