@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cadastrarProduto</title>
 
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/javascript.js"></script>
 </head>
 <body>
     
@@ -14,28 +14,28 @@
         <main>
     
             <nav> 
-                <a href="#">Register</a>
-                <a href="./login.html">Login</a>
+                <a href="#" >Register</a>
+                <a href ="../HTML/index.html">Login</a>
             </nav>
     
             <h1>Create your account</h1>
     
             <label for="name">Username</label>
-            <input id="name" type="text" placeholder="Pedro" >
+            <input id="name" type="text" placeholder="Pedro" required>
 
-            <label for="name">Birth date</label>
-            <input id="name" type="date" >
+            <label for="birth">Birth date</label>
+            <input id="date" type="date" required>
     
             <label for="email">Email</label>
-            <input id="email" type="email" placeholder="pedroguaiume@gmail.com" >
+            <input id="email" type="email" placeholder="pedroguaiume@gmail.com" required>
         
         
             <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Enter your password" >
+            <input id="password" type="password" placeholder="Enter your password" required>
         
             <!-- <a href="#" id="forgot">Forgot Password?</a>  n sei se vamos deixar no codigo ainda -->
             
-            <button onclick="register()">Create Account</button>
+            <button type="submit" onclick="verifica_cadastro()" >Create Account</button>
         
             
         </main>
