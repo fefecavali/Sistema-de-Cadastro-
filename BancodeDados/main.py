@@ -1,9 +1,10 @@
+# Parte Update, Insert, Delete
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from classes import Customer, Item, Order_item, Employee, Order, Payment
 from datetime import date
  
-# Importando as entidades do arquivo classes.py
 
 # Criar engine e sessão
 engine = create_engine('postgresql://EUFACOPROGRAMA:apXBE4kgASy6@ep-damp-waterfall-38037149.us-east-2.aws.neon.tech/mecanica_teste?sslmode=require')
@@ -127,20 +128,38 @@ for a in listaQuery:
 session.commit()
 
 
-# '----> UPDATE <----'
-# session.query(Customer).filter(Customer.id_customer == "21499845678").update( { "name_customer" : "Fernanda Cavali"})
-# session.query(Item).filter(Item.id_item == 22).update( { "name_item_pedido" : "Cabo de vela"})
-# session.query(Item_pedido).filter(Item_pedido.id_item == 22).update( { "service" : "vela ruim"})
-# session.query(Order).filter(Order.id_order == 12345678910).update( { "id_customer" : "87332199021"})
-# session.query(Payment).filter(Payment.id_pay == 123456).update( { "name_pay" : "cartão"})
+'----> UPDATE <----'
 
-# session.commit()
+session.query(Customer).filter(Customer.id_customer == "21499845678").update( { "name_customer" : "Fernanda Cavali"})
+session.query(Item).filter(Item.id_item == 22).update( { "name_item_pedido" : "Cabo de vela"})
+session.query(Order_item).filter(Order_item.id_item == 22).update( { "service" : "vela ruim"})
+session.query(Order).filter(Order.id_order == 12345678910).update( { "id_customer" : "87332199021"})
+session.query(Payment).filter(Payment.id_pay == 123456).update( { "name_pay" : "cartão"})
 
-# # # '----> DELETE <----'
+session.query(Customer).filter(Customer.number_customer == 998058909).update( { "car" : "honda civic"})
+session.query(Item).filter(Item.price == 20).update( { "price" : 25})
+session.query(Order_item).filter(Order_item.payment == "pix").update( { "id_item" : 37})
+session.query(Order).filter(Order.id_serv == 123456).update( { "id_order" : "12345199021"})
+session.query(Payment).filter(Payment.portion == 12).update( { "name_pay" : "pix"})
 
-# # # session.query(Customer).filter(Customer.id_customer == "21499845678").delete()
-# # # session.query(Item).filter(Item.id_item == 22).delete()
-# # # session.query(Item_pedido).filter(Item_pedido.id_item == 22).delete()
+
+session.commit()
+
+
+
+'----> DELETE <----'
+
+session.query(Customer).filter(Customer.number_customer == 998058909).delete()
+session.query(Item).filter(Item.price == 20).delete()
+session.query(Order_item).filter(Order_item.payment == "pix").delete()
+session.query(Order).filter(Order.id_serv == 123456).delete()
+session.query(Payment).filter(Payment.portion == 12).delete()
+
+session.query(Customer).filter(Customer.id_customer == "21499845678").delete()
+session.query(Item).filter(Item.id_item == 22).delete()
+session.query(Order_item).filter(Order_item.id_item == 22).delete()
+
+session.commit()
 
 # Fechar conexão
 session.close()  
