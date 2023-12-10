@@ -6,7 +6,7 @@
     <title>cadastrarProduto</title>
 
     <link rel="stylesheet" href="../CSS/style.css">
-    <script src="../JS/javascript.js"></script>
+    <script src="../JS/script.js"></script>
 </head>
 <body>
     
@@ -14,12 +14,17 @@
         <main>
     
             <nav> 
-                <a href="../HTML/cadastro.html" >Register</a>
-                <a href="#">Login</a>
+                <a href="#" >Register</a>
+                <a href ="../HTML/index.html">Login</a>
             </nav>
     
-            <h1>Log in to your account</h1>
+            <h1>Create your account</h1>
     
+            <label for="name">Username</label>
+            <input id="name" type="text" placeholder="Pedro" required>
+
+            <label for="birth">Birth date</label>
+            <input id="date" type="date" required>
     
             <label for="email">Email</label>
             <input id="email" type="email" placeholder="pedroguaiume@gmail.com" required>
@@ -30,7 +35,7 @@
         
             <!-- <a href="#" id="forgot">Forgot Password?</a>  n sei se vamos deixar no codigo ainda -->
             
-            <button type="submit" onclick="verifica_login()" >Create Account</button>
+            <button type="submit" onclick="verifica_cadastro()" >Create Account</button>
         
             
         </main>
