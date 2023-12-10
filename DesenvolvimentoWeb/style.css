@@ -1,13 +1,9 @@
 * {
-   margin: 0%;
-   padding: 0%;
+   
     box-sizing: border-box;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    list-style: none;
-    overflow: hidden
-}
 
+}
 
 :root {
 
@@ -24,77 +20,110 @@
 
   }
 
-  .container {
-    display: grid;
-    grid-template-columns: 35% 65%;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: var(--blue);
+
 }
 
-  .foto {
-    width: 100%;
-    height: 100vh;
-    border: 2px solid black;
-  }
+nav {
+    width: var(--width);
+    padding-top: 4%;
 
-  .usuario {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--blue);
+    
+}
+
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+   
+}
+
+main{  
+    width: calc(var(--width) / 2);
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     align-items: center;
-  }
+    border-radius: 30px;
+    gap: 18px;
 
+    background-color: var(--light-gray); 
 
-  input {
-    width: 100%;
-    padding: 1%;
-    background-color: lightgray;
+}
+
+input, label, button {
+    width: calc(var(--width)*0.8); 
+   
+    font-size: 16px;
+
+    align-self: center;
+    color: var(--black) ; 
+}
+
+input, button {
+    height: var(--size);
     border-radius: 10px;
-    margin-top: 5%;
-  }
+}
 
-  label {
-    padding: 4%;
-  }
+input {
 
-  button {
-    border-radius: 10px;
     background-color: var(--light-gray);
-    padding: 3%;
-    margin: 10%;
-    margin-left: 35%;
-    
-  }
+    border: 1px solid black;
+    padding: 4px;
 
-  body {
+}
+
+label {
+    padding-top: 10px;
+    
+}
+
+button {
     background-color: var(--blue);
-    height: 100%;
+    width: calc(var(--width)*0.6);
+
+    color: var(--white);
     
-  }
+    margin-bottom: 20px; /* Aumenta o espaço abaixo do botão */
+}
 
-  h1 {
-    padding: 5%;
-    font-size: 30px;
-  }
 
-  img {
-    width: 100%;
-    height: 100%;
-  }
 
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-  }
+.inputAfter {
+    position: relative;
+}
+  
+.inputAfter::after {
+    background-color: var(--orange);
+    background-repeat: no-repeat;     /*se não repete */
+    background-position: center center;
 
-  nav a {
-    text-decoration: none;
-    color: var(--black);
-    padding-top: 10%;
+    content: '';
+    display: block;
 
-  }
-
-  nav a:hover {
-    border-bottom: 1px solid white;
-    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+   
+    position: absolute;
+    right: 5%;
+    top: 0px;
   }
