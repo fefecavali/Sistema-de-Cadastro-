@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicos Flavinho</title>
+
+    <link rel="stylesheet" href="../static/lista.css">
+</head>
+<html>
+<body>
+    <div class="container">
+        <div class="foto">
+            <img src="https://img.freepik.com/vetores-premium/mascote-de-desenho-mecanico_85893-206.jpg" alt="">
+        </div>
+        <div class="usuario">
+            <h1>Information about your orders :</h1>
+            <br>
+            <form action="/buscando" method="post">
+                <label for="order_id">Enter Order ID:</label>
+                <br>
+                <input type="text" id="order_id" name="pedido_id" required>
+                <button type="submit">Search</button>
+            </form>
+            <br>
+            
+            {% if customer %}
+                <h2>Order Details:</h2>
+                <ul>
+                    <li>Customer ID: {{ customer.id_customer }}</li>
+                    <li>Customer Name: {{ customer.customer_name }}</li>
+                    <li>Customer Number: {{ customer.customer_number }}</li>
+                    <li>Address: {{ customer.customer_address }}</li>
+                </ul>
+            {% else %}
+                <p>Nenhum pedido encontrado.</p>
+            {% endif %}
+
+                <nav>
+                    <a href="pagina.html">Main Page</a>
+                    <a href="registro.html">Login</a>
+                    <a href="cadastro.html">Register</a>
+                </nav>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
