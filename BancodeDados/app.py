@@ -1,21 +1,21 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 
-app = Flask(__name__, template_folder='.') ##utiliza o template_folder pq não criamos o diretorio template/ que geramente é criado
+app = Flask(__name__, template_folder='DesenvolvimentoWeb/HTML') ##utiliza o template_folder pq não criamos o diretorio template/ que geramente é criado
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://EUFACOPROGRAMA:apXBE4kgASy6@ep-damp-waterfall-38037149.us-east-2.aws.neon.tech/mecanica_teste?sslmode=require'
 
 database = SQLAlchemy(app)
 
 
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
+@app.route('/')
+def index():
+    return render_template('pagina.html')
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
-##Conexao com as classes ja criadas em crud.py
+if __name__ == '__main__':
+    app.run(debug=True)
+#Conexao com as classes ja criadas em crud.py
 
 class Customer(database.Model):
     __tablename__ = 'customer'
