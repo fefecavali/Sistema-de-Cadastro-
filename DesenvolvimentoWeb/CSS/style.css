@@ -55,18 +55,26 @@ h1 {
    
 }
 
-main{  
-    width: calc(var(--width) / 2);
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    width: 100vw;
+}
+
+
+main {
+    width: calc(var(--width)/2);
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     align-items: center;
     border-radius: 30px;
     gap: 18px;
-
-    background-color: var(--light-gray); 
-
+    background-color: var(--light-gray);
+    padding: 40px; /* Adicionando espaçamento interno */
 }
 
 input, label, button {
