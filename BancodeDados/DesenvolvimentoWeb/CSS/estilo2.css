@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(30, 30, 99);
+    height: 8vh;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.menu {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+#icone {
+    color: yellow;
+    display: block;
+    text-align: center;
+    display: none;
+}
+
+@media (max-width: 767px) {
+    #icone {
+        display: block;
+    }
+}
+
+#icone:hover {
+    cursor: pointer;
+    background-color: rgb(82, 82, 218);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    color: #fff;
+    margin:0 auto;
+}
+
+.container h1 {
+    font-size: 3em;
+    color: yellow;
+}
+
+.container h2 {
+    font-size: 4em;
+}
+
+.container a {
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 100px) and (max-width: 1023px) {
+    .container {
+        width: 80vw;                                                                                                                                                                                                                          
+    }
+
+    .pecas1 {
+        width: 50%;
+        height: 50%;
+    }
+
+    .design {
+        position: absolute;
+        left: 14.5%;
+        height: 100%;
+        width: 96.5%;
+        background-color: rgb(219, 219, 22);
+        clip-path: circle(60% at bottom right);
+        z-index: -10;
+        margin-bottom: 100vh;
+       
+    }
+
+    
+
+    
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container {
+        width: 70vw;
+    }
+
+    .pecas1 {
+        width: 30%;
+        height: 30%;
+    }
+
+    .design {
+        position: absolute;
+        left: 14.5%;
+        height: 100%;
+        width: 96.5%;
+        background-color: rgb(219, 219, 22);
+        clip-path: circle(60% at bottom right);
+        z-index: -10;
+        margin-bottom: 100vh;
+        padding: 10;
+       
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 70vw;
+    }
+
+    .pecas1 {
+        width: 30%;
+        height: 30%;
+    }
+
+
+    
+}
+
+.design {
+    position: absolute;
+    height: 100%;
+    width: 85%;
+    background-color: rgb(219, 219, 22);
+    clip-path: circle(60% at bottom right);
+    z-index: -10;
+    margin-bottom: 100vh;
+}
+
+.sobre {
+    color: white;
+    background-color: black;
+}
+
+.sobre .container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.sobre .descricao h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.sobre .descricao p {
+    text-align: left;
+}
+
+.services {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.services .container2 h2 {
+    text-align: center;
+    font-size: 3em;
+}
+
+.services .container2 p {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.peças {
+    text-align: center;
+}
+
+.rodapé {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: black;
+    padding: 50px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    width: 83vw;
+}
