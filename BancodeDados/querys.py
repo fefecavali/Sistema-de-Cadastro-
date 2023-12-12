@@ -18,9 +18,9 @@ print(f'''
 Consultas Fernanda Moreira Cavali 
 RA: 2441012
 --------------------------------- ''')
-#1 Retorne o cliente que possui o id 7890123456
+#1 Retorne o cliente que possui o id 1234567890
 print(f' \n ----> Consulta 1')
-id="7890123456"
+id="1234567890"
 cliente1 = session.query(Customer).filter_by(id_customer=id).first()
 
 if cliente1:
