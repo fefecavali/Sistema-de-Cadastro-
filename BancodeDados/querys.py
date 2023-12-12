@@ -9,11 +9,15 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 '--> consultas Bruno'
-
+print(f''' \n
+---------------------------------
+Consultas Bruno Eduardo Pena 
+RA: 2461234
+--------------------------------- ''')
 
 
 '--> consultas Fernanda'
-print(f''' 
+print(f''' \n
 ---------------------------------
 Consultas Fernanda Moreira Cavali 
 RA: 2441012
@@ -48,9 +52,18 @@ print('\n')
 
 
 '--> consultas Lara'
+print(f''' \n
+---------------------------------
+Consultas Lara Heloisa Silva Deitos
+RA: 2441071
+--------------------------------- ''')
 
 '--> consultas Pedro'
-
+print(f''' \n
+---------------------------------
+Consultas Pedro Felipe Onofre Utumi
+RA: 2441160
+--------------------------------- ''')
 #1
 all = session.query(Order).all()
 #2
@@ -59,13 +72,17 @@ orders_ordered = session.query(Order).order_by(Order.id_order).all()
 specific_orders = session.query(Order).filter(Order.id_customer == '21499845678').all()
 
 '--> consultas Sara'
-
+print(f''' \n
+---------------------------------
+Consultas Sara Stephany Guaiume Cipriano
+RA: 2441187
+--------------------------------- ''')
 #1
 data = session.query(Employee).all() #selecionando tudo da tabela employee
 print(data[2].wage_employee,data[4].wage_employee) #pegando o salario do objeto na posição 02
 session.commit()
 #2
-data2 = session.query(Employee).filter(Employee.name_employee == 'Sara Guaiume').all()
+data2 = session.query(Employee).filter(Employee.name_employee == 'Bob').all()
 print(data2)
 #3
 data3 = session.query(Employee).filter(Employee.wage_employee < 2000).order_by(Employee.number_employee).all()
