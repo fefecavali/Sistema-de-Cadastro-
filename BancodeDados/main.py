@@ -15,7 +15,7 @@ session = Session()
 # '----> INSERT <----'   obs: Professor nesa parte usamos o chat para termos criatividade de criarmos tantos objetos das classes, esperamos que não tenha problema
 
 insert_customer = [Customer(
-        id_customer="21499845678",
+        id_customer="21499845678",   
         number_customer=998058909,
         address_customer="Rua Mambore bonita",
         name_customer="Fernanda",
