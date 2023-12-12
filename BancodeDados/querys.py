@@ -53,7 +53,7 @@ data = session.query(Employee).all() #selecionando tudo da tabela employee
 print(data[2].wage_employee,data[4].wage_employee) #pegando o salario do objeto na posição 02
 session.commit()
 #2
-data2 = session.query(Employee).filter(Employee.name_employee == 'Sara Guaiume').all()
+data2 = session.query(Employee).filter(Employee.name_employee == 'Bob').all()
 print(data2)
 #3
 data3 = session.query(Employee).filter(Employee.wage_employee < 2000).order_by(Employee.number_employee).all()
