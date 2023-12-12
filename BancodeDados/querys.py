@@ -10,8 +10,16 @@ session = Session()
 
 '--> consultas Bruno'
 
+
+
 '--> consultas Fernanda'
+print(f''' 
+---------------------------------
+Consultas Fernanda Moreira Cavali 
+RA: 2441012
+--------------------------------- ''')
 #1 Retorne o cliente que possui o id 7890123456
+print(f' \n ----> Consulta 1')
 id="7890123456"
 cliente1 = session.query(Customer).filter_by(id_customer=id).first()
 
@@ -21,13 +29,23 @@ else:
     print(f'Cliente {id} não encontrado.')
 
 #2 Retorne os carros dos clientes moram na "Avenida araruna fedida"
+print(f' \n ----> Consulta 2')
 
 address = "Avenida araruna fedida"
 carros_cliente2 = session.query(Customer).filter_by(address_customer=address).all()
 for i in carros_cliente2:
     print(f"Cliente: {i.name_customer} possui o carro: {i.car}")
 
-#3
+#3 Retorne todos os numeros de pedido da cliente Sara Guaiume
+
+cliente3 = 'Sara Guaiume'
+numeros_clientes3 = session.query(Order.id_order, Customer.name_customer).join(Customer, Order.id_customer == Customer.id_customer).filter(Customer.name_customer == cliente3).all()
+
+print(f' \n ----> Consulta 3')
+for a in numeros_clientes3:
+    print(f'O número de um dos pedidos do cliente {a.name_customer} é {a.id_order}')
+print('\n')
+
 
 '--> consultas Lara'
 
