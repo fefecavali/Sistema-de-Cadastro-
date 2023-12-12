@@ -35,10 +35,16 @@ for i in carros_cliente2:
 
 #1
 all = session.query(Order).all()
+print(all)
+session.commit()
 #2
 orders_ordered = session.query(Order).order_by(Order.id_order).all()
+print(orders_ordered)
+session.commit()
 #3
 specific_orders = session.query(Order).filter(Order.id_customer == '21499845678').all()
+print(specific_orders)
+session.commit()
 
 '--> consultas Sara'
 
