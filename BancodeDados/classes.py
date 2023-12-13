@@ -68,14 +68,14 @@ class Employee(Base):
 
     def __repr__(self):
         return f''' 
-    O funcionario {self.name_employee}, numero: {self.number_employee} está responsável pelo serviço
+    O funcionario: {self.name_employee}, numero: {self.number_employee} está responsável pelo serviço
                             '''
     
 class Order(Base):
     __tablename__ = 'order_service'
 
     id_order = Column(Integer, primary_key=True)
-    id_customer = Column(String, ForeignKey("customer.id_customer"), nullable=False)
+    id_customer = Column(String, ForeignKey(Customer.id_customer), nullable=False)
     id_serv = Column(Integer, nullable=False)                    
     
     def __repr__ (self):
@@ -87,7 +87,7 @@ class Payment(Base):
     __tablename__ = 'payment'
 
     id_pay = Column(Integer, primary_key=True)
-    id_order = Column(Integer, ForeignKey("order_service.id_order"), nullable=False)
+    id_order = Column(Integer, ForeignKey(Order.id_order), nullable=False)
     name_pay = Column(String, nullable=False)
     portion = Column(Integer, nullable=False)
     
