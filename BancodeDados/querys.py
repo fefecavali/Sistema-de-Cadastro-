@@ -14,17 +14,17 @@ print(f''' \n
 Consultas Bruno Eduardo Pena 
 RA: 2461234
 --------------------------------- ''')
-## ----> SELECT <----
+## 1 ----> SELECT <----
 items_with_prices = session.query(Item.name_item_request, Item.price).all()
 
-## ----> COUNT <----
+## 2 ----> COUNT <----
 total_items = session.query(Item).count()
 
-## ----> DISTINCT <----
+## 3 ----> DISTINCT <----
 payment_methods = session.query(Order_item.payment).distinct().all()
 
 
-'--> consultas Fernanda'
+# '--> consultas Fernanda'
 print(f''' \n
 ---------------------------------
 Consultas Fernanda Moreira Cavali 
@@ -59,27 +59,27 @@ for a in numeros_clientes3:
 print('\n')
 
 
-'--> consultas Lara'
+#'--> consultas Lara'
 print(f''' \n
 ---------------------------------
 Consultas Lara Heloisa Silva Deitos
 RA: 2441071
 --------------------------------- ''')
-#consulta: numero de pessoas que pagaram com cartao de crdito
+#consulta 1: numero de pessoas que pagaram com cartao de crdito
 count = session.query(Payment).filter(Payment.name_pay == "cartão").count()
 print(f"Total de pessoas que pagaram com cartão de crédito: {count}")
 
-#consulta: lista pagamentos com parcelas maiores que 6
+#consulta 2: lista pagamentos com parcelas maiores que 6
 filter = session.query(Payment).filter(Payment.portion > 6).all()
 for payment in filter:
    print(payment)
 
-#consulta: soma formas de pagamento
+#consulta 3: soma formas de pagamento
 payment= session.query(Payment.name_pay).distinct().all()
 print("Formas de pagamentos:")
 for method in payment:
    print(method.name_pay)
-   
+
 '--> consultas Pedro'
 print(f''' \n
 ---------------------------------
