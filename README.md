@@ -1,6 +1,6 @@
 # crudTrabalhoAvaliativo
 
-Trabalho Avaliativo Desenvolvimento Web e Banco de Dados M32
+```Trabalho Avaliativo Desenvolvimento Web e Banco de Dados M32```
 
 1. Criamos um ambiente virtual :
 
