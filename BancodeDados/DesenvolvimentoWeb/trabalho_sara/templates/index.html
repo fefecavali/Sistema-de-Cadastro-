@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+   margin: 0%;
+   padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    list-style: none;
+    overflow: hidden
+}
+
+
+:root {
+
+    /* cores */
+    --white: #FFF;
+    --black: #000; 
+    --light-gray: rgb(216, 216, 231);
+    --blue: #4c56b0;
+
+   
+    /* dimesoes */
+    --width: 100%;
+    --size: 6vh;
+
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+  .foto {
+    width: 100%;
+    height: 100vh;
+    
+  }
+
+  .usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  input {
+    width: 100%;
+    padding: 1%;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-top: 5%;
+  }
+
+  label {
+    padding: 4%;
+  }
+
+  button {
+    border-radius: 10px;
+    background-color: var(--light-gray);
+    padding: 3%;
+    margin: 10%;
+    margin-left: 35%;
+    
+  }
+
+  body {
+    background-color: var(--blue);
+    height: 100%;
+    
+  }
+
+  h1 {
+    padding: 5%;
+    font-size: 30px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--black);
+    padding-top: 10%;
+
+  }
+
+  nav a:hover {
+    border-bottom: 1px solid white;
+    color: white;
+  }
+
+    </style>
+    <link rel="stylesheet" href="lista.css">
+</head>
+<html>
+<body>
+    <div class="container">
+        <div class="foto">
+            <img src="https://img.freepik.com/vetores-premium/mascote-de-desenho-mecanico_85893-206.jpg" alt="">
+        </div>
+    <div class="usuario">
+        <h1>Informações sobre seus pedidos</h1>
+    <br>
+    <form action="/buscar_pedido" method="post">
+        <label for="pedido_id">Digite o ID do pedido:</label>
+        <br>
+        <input type="text" id="pedido_id" name="pedido_id" required>
+        <button type="submit">Buscar</button>
+    </form>
+    <br>
+    <nav>
+        <a href="pagina.html">Página Principal</a>
+        <a href="index.html">Login</a>
+        <a href="cadastro.html">Register</a>
+    </nav>
+    </div>
+    </div>
+</body>
+</html>
