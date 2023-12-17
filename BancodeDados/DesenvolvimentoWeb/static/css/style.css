@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFF;
+    --black: #000; 
+    --light-gray: rgb(216, 216, 231);
+    --blue: #4c56b0;
+}
+
+body {
+    background: linear-gradient(to right, #0074cc, #0061a7, #004d99, #003366);
+    color: var(--white);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+header {
+    background: var(--black);
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.foto img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.usuario {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: var(--light-gray);
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--blue);
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--white);
+    color: var(--white);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastrarProduto</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Login.css')}}">
+    <script src="{{ url_for('static', filename='js/javascript.js')}}"></script>
+</head>
+
+<body>
+
+    <!-- <form action="" method="post"> -->
+    <form>
+        <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+        <nav>
+            <a href="#">Register</a>
+            <a href="./Login.html">Login</a>
+        </nav>
+
+        <h1>Create your account</h1>
+
+        <label for="name">Username</label>
+        <input id="name" type="text" placeholder="Pedro" required>
+
+        <label for="birth">Birth date</label>
+        <input id="date" type="date" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="pedroguaiume@gmail.com" required>
+
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter your password" required>
+
+        <!-- <a href="#" id="forgot">Forgot Password?</a>  n sei se vamos deixar no codigo ainda -->
+
+        <button type="submit" onclick="verifica_cadastro()">Create Account</button>
+
+
+    </form>
+
+    <!-- </form> -->
+</body>
+
+</html>
