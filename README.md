@@ -17,7 +17,3 @@
 
 " from sqlalchemy import create_engine, Column, Integer, String, Float, Date, ForeignKey " e 
 "from sqlalchemy.orm import sessionmaker, declarative_base "
-
-
-
-Obs: Nomes de entidade em inglês para padronizar com resto do código.
