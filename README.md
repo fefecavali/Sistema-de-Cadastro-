@@ -1,4 +1,4 @@
-# crudTrabalhoAvaliativo
+# CRUD Oficina Mecânica
 
 ```Trabalho Avaliativo Desenvolvimento Web e Banco de Dados M32```
 
